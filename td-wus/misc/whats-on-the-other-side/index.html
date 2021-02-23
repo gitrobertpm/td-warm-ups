@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>What's on the other side</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>What's on the other side</h1>
+      <p>Treehouse Full Stack JavaScript Techdegree</p>
+      <p>Project Warm Up</p>
+    </header>
+
+    <div class="inst-cont">
+      <div class="inst">
+        <p>You have a circle with an even number of points around its circumference.</p>
+        <p>The total number of points is a random even number ranging from 6 to 24.</p>
+        <p>The numbers will start at zero and go up from there, clockwise around the circumference.</p>
+        <p>So a circle with 10 numbers will look like this: <strong>→</strong></p>
+        <p>Given the <span class="code">tp</span> (total points) and <span class="code">sp</span> (specific point), write a short algorithm that returns the number directly opposite the <span class="code">sp</span> (specific point)?</p>
+        <p><strong>Example: </strong><span class="code">tp = 10, sp = 4, returns: 9</span></p>
+      </div>
+      <img class="dial" src="img/myDial.png" alt="Circle with numbered points around its circumference">
+      <p class="inst-2"><strong>Write your code</strong> in the <span class="code">findTheOtherSide</span> function in the <span class="code">js/script.js</span> file.  Tests are provided that will run your code and display results below when you click the <strong>"Run Tests"</strong> button below.</p>
+    </div>
+    
+    <div class="inst-cont">
+      <div class="inst test-list">
+        <p class="test"><strong>Test 1: </strong><span class="code"> tp = 6, sp = 5, returns:</span> <strong></strong><span id="test-1"></span></strong></p>
+        <p class="test"><strong>Test 2: </strong><span class="code"> tp = 10, sp = 4, returns:</span> <strong></strong><span id="test-2"></span></strong></p>
+        <p class="test"><strong>Test 3: </strong><span class="code"> tp = 14, sp = 7, returns:</span> <strong></strong><span id="test-3"></span></strong></p>
+        <p class="test"><strong>Test 4: </strong><span class="code"> tp = 24, sp = 19, returns:</span> <strong></strong><span id="test-4"></span></strong></p>
+      </div>  
+      <input type="button" id="btn" class="btn control-btn" value="Run Tests">    
+    </div>
+
+    
+    <!-- <script src="js/script.js"></script> -->
+    <script src="solution.js"></script>
+    <script src="js/tests.js"></script>
+    
+  </body>
+</html>

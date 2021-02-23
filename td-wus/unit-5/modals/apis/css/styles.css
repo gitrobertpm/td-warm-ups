@@ -1,0 +1,196 @@
+/**
+ * Treehouse FSJS Techdegree - Project Warm Up
+ *  - CSS
+ * Developed by: Robert Manolis - Student Success Specialist
+ *               Milwaukie, OR - 2019
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+:root {
+  --th-green: rgb(95, 207, 128);
+  --th-green-hover: rgb(35, 214, 86);
+  --th-bg-color-full-alpha: rgb(62, 71, 79);
+  --th-bg-color-three-quarter-alpha: rgba(62, 71, 79,);
+  --th-bg-color-med-alpha: rgba(62, 71, 79, 0.5);
+  --th-bg-color-quarter-alpha: rgba(62, 71, 79, 0.25);
+  --th-bg-color-light-alpha: rgba(62, 71, 79, 0.1);
+  --soft-white: rgba(250, 250, 250, 0.9);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  background: var(--th-bg-color-light-alpha);
+}
+
+.header-heading {
+  width: 100%;
+  background: var(--th-bg-color-full-alpha);
+  box-shadow: 0px 2px 3px var(--th-bg-color-med-alpha);
+}
+
+.header-heading div {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  display: block;
+  color: var(--th-green);
+  text-shadow: 1px 1px 1px var(--th-bg-color-med-alpha);
+  margin: 0 auto;
+  margin-right: 40px;
+  padding: 20px 0;
+}
+
+.logo {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: inline-block
+}
+
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1000px;
+  /* height: 115px; */
+  margin: 45px auto 35px;
+  padding: 10px;
+  background: var(--th-bg-color-light-alpha);
+  border: 1px solid var(--soft-white);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px var(--th-bg-color-quarter-alpha) inset, 1px 1px 5px var(--th-bg-color-quarter-alpha);
+}
+
+.item {
+  font-weight: bold;
+  color: var(--th-bg-color-full-alpha);
+  width: 25%;
+  /* height: 75px; */
+  margin: 10px auto;
+  padding: 5px;
+  background: var(--soft-white);
+  border: 1px solid var(--soft-white);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px var(--th-bg-color-quarter-alpha) inset, 1px 1px 5px var(--th-bg-color-quarter-alpha);
+  transition: all 0.4s;
+}
+
+.item h1 {
+  margin: auto
+}
+
+.item img {
+  width: 100%;
+}
+
+.item ul {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.item li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  line-height: 1.2rem;
+  display: block;
+  margin: 7px auto;
+}
+
+.item li strong {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Checkbox styling */
+form {
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 25px;
+  background: var(--th-bg-color-light-alpha);
+  border: 1px solid var(--soft-white);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px var(--th-bg-color-quarter-alpha) inset, 1px 1px 5px var(--th-bg-color-quarter-alpha);
+}
+
+fieldset {
+  text-align: left;
+  background: var(--soft-white);
+  margin-bottom: 15px;
+  padding: 25px;
+  border: 1px solid var(--soft-white);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px var(--th-bg-color-quarter-alpha) inset, 1px 1px 5px var(--th-bg-color-quarter-alpha);
+}
+
+legend {
+  color: var(--soft-white);
+  text-shadow: 1px 1px 1px var(--th-bg-color-med-alpha);
+  padding: 10px;
+  background: var(--th-green);
+  border: 1px solid var(--soft-white);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px var(--th-bg-color-quarter-alpha) inset, 1px 1px 5px var(--th-bg-color-quarter-alpha);
+}
+
+.form-section {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 100px;
+}
+
+fieldset span {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: bolder;
+  margin: 0px auto 10px;
+}
+
+label {
+  display: block;
+}
+/* End checkbox styling */
+
+
+
+.control-btn {
+  cursor: pointer;
+  outline: none;
+  color: var(--soft-white);
+  text-shadow: 1px 1px 1px var(--th-bg-color-med-alpha);
+  width: 100px;
+  height: 50px;
+  background: var(--th-green);
+  border: 1px solid var(--soft-white);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px var(--th-bg-color-quarter-alpha) inset, 1px 1px 5px var(--th-bg-color-quarter-alpha);
+  transition: 0.4s ease-in-out;
+}
+
+.control-btn:hover {
+  background: var(--th-green-hover);
+  box-shadow: 1px 1px 3px var(--th-bg-color-quarter-alpha) inset, 3px 3px 7px var(--th-bg-color-quarter-alpha);
+}

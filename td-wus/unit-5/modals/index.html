@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="header-heading">
+        <div>
+          <img src="img/frogprint.png" alt="Treehouse logo" class="logo">
+          <h1>Async Modal</h1>
+        </div>
+        <div class="info">
+          <p>FSJS Techdegree</p>
+          <p>Project Warm Up</p>
+        </div>
+      </div>
+    </header>
+
+    <form action="#" method="get" id="form" class="form">
+      <label for="catergories">Trivia Categories</label>
+      <select name="categories" id="catergories" class="categories">
+        <option value="Choose your category" hidden selected>Choose your category</option>
+        <option value="Any">Any</option>
+        <option value="General-Knowledge" data-num="9">General Knowledge</option>
+        <optgroup label="Entertainment">
+          <option value="Film" data-num="11">Film</option>
+          <option value="Music" data-num="12">Music</option>
+          <option value="Television" data-num="14">Television</option>
+          <option value="Books" data-num="10">Books</option>
+          <option value="Comics" data-num="29">Comics</option>
+          <option value="Video-Games" data-num="15">Video Games</option>
+          <option value="Board-Games" data-num="16">Board Games</option>
+          <option value="Cartoons-Animations" data-num="32">Cartoons &amp; Animations</option>
+        </optgroup>
+        <optgroup label="Science">
+          <option value="Nature" data-num="17">Nature</option>
+          <option value="Computers" data-num="18">Computers</option>
+          <option value="Gadgets" data-num="30">Gadgets</option>
+          <option value="Mathematics" data-num="19">Mathematics</option>
+        </optgroup>
+        <option value="Mythology" data-num="20">Mythology</option>
+        <option value="History" data-num="23">History</option>
+        <option value="Geography" data-num="22">Geography</option>
+        <option value="Art" data-num="25">Art</option>
+        <option value="Politics" data-num="24">Politics</option>
+        <option value="Animals" data-num="27">Animals</option>
+        <option value="Vehicles" data-num="28">Vehicles</option>
+        <option value="Sports" data-num="21">Sports</option>
+        <option value="Celebrities" data-num="26">Celebrities</option>
+      </select>
+      <input type="submit" id="btn" class="btn control-btn" value="Get Trivia">
+    </form>
+
+    <div id="list" class="list"></div>
+
+    <div class="help-container">
+      <p>If you run into trouble or have questions, be sure to reach out in <a href="https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat" target="_blank">Slack <img src="img/fsjs.png"></a></p>
+    </div>
+    <br>
+    <script src="js/helpers.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="solution.js"></script>
+  </body>
+</html>

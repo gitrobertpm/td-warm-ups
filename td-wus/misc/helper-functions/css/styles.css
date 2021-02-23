@@ -1,0 +1,115 @@
+/**
+ * Treehouse FSJS Techdegree - Code Adventure
+ * Helper Functions - CSS
+ * Developed by: Robert Manolis - Student Success Specialist
+ *               Milwaukie, OR - 2019
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+	text-align: center;
+}
+
+h1 {
+  color: rgba(58, 193, 98, 0.9);
+  text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.5);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: inline-block
+}
+
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 620px;
+  margin: 35px auto 35px;
+  padding: 10px;
+  background: rgba(50, 50, 50, 0.1);
+  border: 1px solid rgba(60, 60, 66, 0.45);
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0, 0.25) inset;
+}
+
+.item {
+  font-weight: bold;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.999);
+  border: 1px solid rgba(57, 83, 65, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px rgba(25, 25, 25, 0.35);
+  transition: all 0.4s;
+}
+
+.list-1 {
+  height: 350px;
+}
+
+.list-1 .item {
+  color: rgba(50, 50, 50, 0.7);
+  width: 250px;
+  height: 300px;
+  padding: 15px;
+}
+
+.list-2 {
+  height: 115px;
+}
+
+.list-2 .item {
+  font-size: 3em;
+  color: rgba(50, 50, 50, 0.9);
+  width: 75px;
+  height: 75px;
+  padding-top: 10px;
+}
+
+.list-3 {
+  height: 100px;
+  padding: 20px;
+}
+
+.control-btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  outline: none;
+  color: white;
+  width: 100px;
+  height: 50px;
+  background: rgba(58, 193, 98, 0.9);
+  border: 1px solid rgba(50, 50, 50, 0.9);
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.7), 1px 1px 2px rgba(255, 255, 255, 0.7) inset, -1px -1px 2px rgba(255, 255, 255, 0.57) inset;
+  transition: all 0.4s ease-out;
+}
+
+.active {
+  background: rgba(1, 246, 75, 0.9);
+  border: 2px solid rgba(50, 250, 0, 0.9);
+  box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.7), 1px 1px 2px rgba(50, 250, 0, 0.7) inset, -1px -1px 2px rgba(50, 250, 0, 0.57) inset;
+}
+
+.control-btn:hover {
+  background: rgba(1, 246, 75, 0.9);
+}
+
