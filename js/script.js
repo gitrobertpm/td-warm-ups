@@ -2,7 +2,6 @@
 
 "use strict";
 
-
 const wuContainer = document.querySelector('#wu-container');
 const wuFrame = document.querySelector('#wu-frame');
 
