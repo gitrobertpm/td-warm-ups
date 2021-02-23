@@ -10,7 +10,7 @@ Each warm up is like a mini project and comes with a simple front end that inclu
 
 ## Explore:
 
-To see the LIVE version, [visit: https://gitrobertpm.github.io/td-warm-ups/](https://gitrobertpm.github.io/td-warm-ups/)
+To see the LIVE version, visit: [https://gitrobertpm.github.io/td-warm-ups/](https://gitrobertpm.github.io/td-warm-ups/)
 
 Below a brief description are an inline list of custom drop down menus containing your options.  Selected Warm Ups are displayed in an iframe, where you can even click around and test the completed versions of the warm ups directly in the iframe without ever leaving the page.
 

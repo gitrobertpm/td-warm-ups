@@ -1,10 +1,16 @@
+/* Script for demoing my project warm ups */
+
+"use strict";
 
 
 const wuContainer = document.querySelector('#wu-container');
 const wuFrame = document.querySelector('#wu-frame');
 
+// Set the iframe width
 wuFrame.width = wuContainer.offsetWidth;
 
+
+// Generate names and file paths for all the warms 
 const wuRoot = 'td-wus';
 const wuSubs = ['unit-1', 'unit-2', 'unit-3', 'unit-5', 'misc'];
 const wus = [
@@ -15,8 +21,11 @@ const wus = [
   ['anagram', 'fizz-buzz', 'polygons', 'random-radlibs', 'reversed-vowels', 'whats-on-the-other-side']
 ];
 
+// Remove dashes from names
 const txtStripper = txt => txt.replaceAll('-', ' ');
 
+
+// Create the ULs for the custom drop down
 wus.forEach((wuArr, i) => {
   wuContainer.insertAdjacentHTML('beforeend', `
     <div class="wu-list-container">
@@ -25,6 +34,7 @@ wus.forEach((wuArr, i) => {
     </div>
   `);
 
+  // Create the lis and btns for individual warm ups
   wuArr.forEach((wu, ii) => {
     document.querySelector(`#list-${i}`).insertAdjacentHTML('beforeend', `
       <li class="wu wu-${i}-${ii}">
@@ -35,9 +45,13 @@ wus.forEach((wuArr, i) => {
 });
 
 const wuListContainers = document.querySelectorAll('.wu-list-container');
+
+// Tracker values
 let clicked;
 let wuOpen;
 
+
+// Program drop down menus to open and close accordingly
 wuListContainers.forEach((ul, i) => {
   ul.addEventListener('click', e => {
     wuListContainers.forEach(el => el.style.height = '42px');
@@ -52,21 +66,17 @@ wuListContainers.forEach((ul, i) => {
   });
 });
 
+// More of above
 addEventListener('click', e => { 
   if (![...e.target.parentElement.classList].includes('wu-list-container')) {
     wuListContainers.forEach(el => el.style.height = '42px');
+    wuOpen = '';
   }
 });
 
+// Program buttons to update the iframe src value so it will display a new warm up
 document.querySelectorAll('.wu button').forEach(btn => {
   btn.addEventListener('click', e => {
     wuFrame.setAttribute('src', btn.getAttribute('data-src'));
   });
 });
-
-// const flatWus = [].concat(...wus);
-
-// console.log(paths);
-// console.log(flatWus);
-
-console.log('test');
