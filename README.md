@@ -3,9 +3,7 @@
 
 
 ## Description:
-A collection of some completed examples of the fun educational coding exercises I've created.  I built these for the TD Project Warm Up feature that I invented to better support our students who were feeling unprepared for the early TD projects.
-
-Each warm up is like a mini project and comes with a simple front end that includes basic markup, custom CSS, a JS starter file including helpful code comments and a README file with some basic instructions for getting started.  
+A collection of fun educational coding exercises I created for Techdegree students.  Each warm up is like a mini guided project that covers some basic coding fundamentals.  And each comes with a simple front end that includes basic markup, custom CSS, a JS starter file including helpful code comments and a README file with some basic instructions for getting started.  
 
 
 ## Explore:
