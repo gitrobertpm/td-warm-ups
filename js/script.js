@@ -2,7 +2,11 @@
 
 "use strict";
 
+const infoBtn = document.querySelector('#info-btn');
+const introBox = document.querySelector('.intro-box');
+const menuBtn = document.querySelector('#menu-btn');
 const wuContainer = document.querySelector('#wu-container');
+
 const wuFrame = document.querySelector('#wu-frame');
 
 // Set the iframe width
@@ -23,12 +27,11 @@ const wus = [
 // Remove dashes from names
 const txtStripper = txt => txt.replaceAll('-', ' ');
 
-
 // Create the ULs for the custom drop down
 wus.forEach((wuArr, i) => {
   wuContainer.insertAdjacentHTML('beforeend', `
     <div class="wu-list-container">
-      <h2>${wuSubs[i]} <span class="caret">&#9660;</span></h2>
+      <h2>${wuSubs[i]}</h2>
       <ul id="list-${i}" class="list list-${i}"></ul>
     </div>
   `);
@@ -48,16 +51,23 @@ const wuListContainers = document.querySelectorAll('.wu-list-container');
 // Tracker values
 let clicked;
 let wuOpen;
-
+let infoOpen = false;
+let menuOpen = false;
 
 // Program drop down menus to open and close accordingly
-wuListContainers.forEach((ul, i) => {
-  ul.addEventListener('click', e => {
-    wuListContainers.forEach(el => el.style.height = '42px');
+wuListContainers.forEach((div, i) => {
+  div.addEventListener('click', e => {
+    wuListContainers.forEach(el => {
+      el.style.width = '135px';
+      el.style.overflow = 'hidden';
+      wuContainer.style.overflow = 'hidden';
+    });
     clicked = i;
 
     if (clicked !== wuOpen) {
-      ul.style.height = 'auto';
+      div.style.width = '100%';
+      div.style.overflow = 'visible';
+      wuContainer.style.overflow = 'visible';
       wuOpen = i;
     } else {
       wuOpen = '';
@@ -67,9 +77,18 @@ wuListContainers.forEach((ul, i) => {
 
 // More of above
 addEventListener('click', e => { 
-  if (![...e.target.parentElement.classList].includes('wu-list-container')) {
-    wuListContainers.forEach(el => el.style.height = '42px');
-    wuOpen = '';
+  if ([...e.target.parentElement.classList].includes('wu') || 
+      [...e.target.classList].includes('wu')) {
+        wuListContainers.forEach(el => {
+          el.style.width = '135px';
+          el.style.overflow = 'hidden';
+        });
+        wuOpen = '';
+
+        menuOpen = !menuOpen;
+        wuContainer.style.overflow = 'hidden';
+        wuContainer.style.width = '70px';
+      
   }
 });
 
@@ -78,4 +97,24 @@ document.querySelectorAll('.wu button').forEach(btn => {
   btn.addEventListener('click', e => {
     wuFrame.setAttribute('src', btn.getAttribute('data-src'));
   });
+});
+
+infoBtn.addEventListener('click', (e) => {
+  infoOpen = !infoOpen;
+  if (infoOpen) {
+    introBox.style.overflow = 'auto';
+    return introBox.style.height = '355px';
+  }
+  introBox.style.overflow = 'hidden';
+  return introBox.style.height = '0';
+});
+
+menuBtn.addEventListener('click', (e) => {
+  menuOpen = !menuOpen;
+  if (menuOpen) {
+    wuContainer.style.overflow = 'auto';
+    return wuContainer.style.width = '100%';
+  }
+  wuContainer.style.overflow = 'hidden';
+  return wuContainer.style.width = '70px';
 });

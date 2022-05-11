@@ -10,15 +10,31 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div class="container">
-      <h1>FSJS Techdegree Project Warm Ups</h1>
+      <h1>Project Warm Ups</h1>
 
-      <p>Check out the custom drop down menus below to see completed examples of some of the fun educational coding exercises I've created.  I built these mini guided projects to help students practice some coding fundamentals and prepare for their unit projects.</p>
+      <p class="slug">An interactive showcase</p>
+      <button type="button" id="info-btn" class="info-btn"><img src="img/info-2.png" alt="Info icon" /></button>
+      <div class="intro-box">
+        <div class="text-box">
+          <p>In the custom dropdown menus below, you'll find buttons to change the display.</p>
+          <p>Each one represents a coding exercise I put together while overseeing an online web development bootcamp.</p>
+          <p>Each exercise contains a basic front end: a bit of HTML, CSS and JavaScript, a friendly user interface, maybe some images, and a helpful set of instructions that describe how to complete the exercise.</p>
+          <p>And each was designed to provide students with an opportunity to practice some recently taught web development concept or technique.</p>
+          <p>The point of these mini-app exercises was to provide a very approachable way to reinforce what the students were learning, while helping them prepare for the upcoming end-of-unit projects they would build.</p>
+        </div>
+        <img src="img/thumbnails.png" alt="Screenshots of Project Warm Ups" />
+        <p class="slug">Check out <a href="https://github.com/gitrobertpm/td-warm-ups" target="_blank">the READEME.md file here</a> for more info.</p>
+      </div>
 
-      <p>For more info and to check out code visit <a href="https://github.com/gitrobertpm/td-warm-ups" target="_blank">this GitHub repo and its README file</a>.</p>
+      
 
-      <div id="wu-container" class="wu-container"></div>
+      <div class="iframe-container">
+        <button type="button" id="menu-btn" class="menu-btn"><img src="img/menu.png" alt="Options icon" /></button>
+        <div id="wu-container" class="wu-container"></div>
 
-      <iframe id="wu-frame" class="wu-frame" src="td-wus/unit-2/fun-dom-manipulation/index.html" height="600" width="768" title="Iframe Example"></iframe>
+        <iframe id="wu-frame" class="wu-frame" src="td-wus/unit-2/fun-dom-manipulation/index.html" height="600" width="768" title="Iframe Example"></iframe>
+      </div>
+      
     </div>
     
     <script src="js/script.js"></script>
